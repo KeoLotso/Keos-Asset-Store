@@ -44,10 +44,19 @@
     </div>
 
     <script>
-        window.onload = function() {r
-            setTimeout(() => {
-                window.location.href = '../index.html' + window.location.hash;
-            }, 1500);
+        window.onload = function() {
+            const hash = window.location.hash.substring(1);
+            
+            if (hash) {
+                const params = new URLSearchParams(hash);
+                const accessToken = params.get('access_token');
+                
+                if (accessToken) {
+                    localStorage.setItem('discord_token', accessToken);
+                }
+
+                window.location.href = 'https://keolotso.github.io/Keos-Asset-Store/index.html';
+            }
         };
     </script>
 </body>
