@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const CLIENT_ID = '1357690313896099942';
-    
-    const REDIRECT_URI = encodeURIComponent('https://keolotso.github.io/Keos-Asset-Store/callback');
-    
+    const REDIRECT_URI = encodeURIComponent('https://keolotso.github.io/Keos-Asset-Store/callback.html');
     const SCOPES = 'identify';
-    
-    const DISCORD_ENDPOINT = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${SCOPES}`;
-    
+    const DISCORD_ENDPOINT = `https://discord.com/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${SCOPES}`;
+
     const loginButton = document.getElementById('login-button');
     const logoutButton = document.getElementById('logout-button');
     const loginSection = document.getElementById('login-section');
