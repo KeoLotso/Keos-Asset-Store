@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const CLIENT_ID = '1357690313896099942';
-    const REDIRECT_URI = 'https://keolotso.github.io/Keos-Asset-Store/';
-    const DISCORD_ENDPOINT = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=identify`;
+    
+    const REDIRECT_URI = encodeURIComponent(window.location.origin + '/callback');
+
+    const SCOPES = 'identify';
+    
+    const DISCORD_ENDPOINT = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${SCOPES}`;
     
     const loginButton = document.getElementById('login-button');
     const logoutButton = document.getElementById('logout-button');
@@ -63,9 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
             : 'https://cdn.discordapp.com/embed/avatars/0.png';
         
         userAvatar.src = avatarUrl;
-        
+
         displayName.textContent = user.global_name || user.username;
-        
+
         userId.textContent = `@${user.username}`;
     }
 
