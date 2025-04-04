@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const CLIENT_ID = '1357690313896099942';
     
-    const REDIRECT_URI = encodeURIComponent(window.location.origin + '/callback');
-
+    const REDIRECT_URI = encodeURIComponent('https://keolotso.github.io/Keos-Asset-Store/callback');
+    
     const SCOPES = 'identify';
     
     const DISCORD_ENDPOINT = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${SCOPES}`;
