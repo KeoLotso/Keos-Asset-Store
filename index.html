@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="user-header" class="hidden">
-        <img id="mini-avatar" src="" alt="Avatar">
-        <span id="mini-name"></span>
-        <img id="settings-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons/icons/settings.svg" alt="Settings">
+    <div class="topbar hidden" id="topbar">
+        <div class="user-info">
+            <img id="top-avatar" class="top-avatar" src="" alt="Avatar">
+            <span id="top-name" class="top-name"></span>
+            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/gear-fill.svg" class="settings-icon" alt="Settings">
+        </div>
     </div>
 
     <div class="center-panel">
@@ -20,16 +22,18 @@
         </div>
     </div>
 
-    <div class="container" id="login-section">
-        <div class="logo">
-            <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.3.0/discord.svg" alt="Discord Logo">
-            <h1>Sign in with Discord</h1>
+    <div class="container">
+        <div id="login-section">
+            <div class="logo">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.3.0/discord.svg" alt="Discord Logo">
+                <h1>Sign in with Discord</h1>
+            </div>
+            <button id="login-button" class="discord-button">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.3.0/discord.svg" alt="Discord Icon">
+                Sign in with Discord
+            </button>
+            <p class="disclaimer">Connect your Discord account to continue</p>
         </div>
-        <button id="login-button" class="discord-button">
-            <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.3.0/discord.svg" alt="Discord Icon">
-            Sign in with Discord
-        </button>
-        <p class="disclaimer">Connect your Discord account to continue</p>
     </div>
 
     <script src="script.js"></script>
