@@ -7,16 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginButton = document.getElementById('login-button');
     const logoutButton = document.getElementById('logout-button');
     const loginSection = document.getElementById('login-section');
-    const profileSection = document.getElementById('profile-section');
-    const userAvatar = document.getElementById('user-avatar');
-    const displayName = document.getElementById('display-name');
-    const userId = document.getElementById('user-id');
+    const mainContent = document.getElementById('main-content');
+    const displayNameSmall = document.getElementById('display-name-small');
+    const userAvatarSmall = document.getElementById('user-avatar-small');
 
     function checkLoginStatus() {
         const token = localStorage.getItem('discord_token');
         if (token) {
             fetchUserInfo(token);
-            showProfileSection();
+            showMainContent();
         } else {
             showLoginSection();
         }
@@ -31,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('discord_token', accessToken);
                 history.pushState("", document.title, window.location.pathname);
                 fetchUserInfo(accessToken);
-                showProfileSection();
+                showMainContent();
             }
         }
     }
@@ -63,21 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
             ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png` 
             : 'https://cdn.discordapp.com/embed/avatars/0.png';
         
-        userAvatar.src = avatarUrl;
-
-        displayName.textContent = user.global_name || user.username;
-
-        userId.textContent = `@${user.username}`;
+        userAvatarSmall.src = avatarUrl;
+        displayNameSmall.textContent = user.global_name || user.username;
     }
 
     function showLoginSection() {
         loginSection.classList.remove('hidden');
-        profileSection.classList.add('hidden');
+        mainContent.classList.add('hidden');
     }
 
-    function showProfileSection() {
+    function showMainContent() {
         loginSection.classList.add('hidden');
-        profileSection.classList.remove('hidden');
+        mainContent.classList.remove('hidden');
     }
 
     loginButton.addEventListener('click', () => {
