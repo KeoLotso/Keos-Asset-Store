@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,34 +8,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div id="login-section">
-            <div class="logo">
-                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.3.0/discord.svg" alt="Discord Logo">
-                <h1>Sign in with Discord</h1>
-            </div>
-            <button id="login-button" class="discord-button">
-                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.3.0/discord.svg" alt="Discord Icon">
-                Sign in with Discord
-            </button>
-            <p class="disclaimer">Connect your Discord account to continue</p>
-        </div>
+    <div id="user-header" class="hidden">
+        <img id="mini-avatar" src="" alt="Avatar">
+        <span id="mini-name"></span>
+        <img id="settings-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons/icons/settings.svg" alt="Settings">
+    </div>
 
-        <div id="profile-section" class="hidden">
-            <div class="profile-header">
-                <h2>Welcome back!</h2>
-                <button id="logout-button">Sign Out</button>
-            </div>
-            <div class="profile-card">
-                <div class="profile-image">
-                    <img id="user-avatar" src="" alt="User Avatar">
-                </div>
-                <div class="profile-info">
-                    <h2 id="display-name"></h2>
-                    <p id="user-id"></p>
-                </div>
-            </div>
+    <div class="center-panel">
+        <div class="main-content">
+            <!-- Future content goes here -->
         </div>
+    </div>
+
+    <div class="container" id="login-section">
+        <div class="logo">
+            <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.3.0/discord.svg" alt="Discord Logo">
+            <h1>Sign in with Discord</h1>
+        </div>
+        <button id="login-button" class="discord-button">
+            <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.3.0/discord.svg" alt="Discord Icon">
+            Sign in with Discord
+        </button>
+        <p class="disclaimer">Connect your Discord account to continue</p>
     </div>
 
     <script src="script.js"></script>
