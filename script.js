@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const CLIENT_ID = '1357690313896099942';
-    const REDIRECT_URI = encodeURIComponent(window.location.origin);
+    const REDIRECT_URI = 'https://keolotso.github.io/Keos-Asset-Store/';
     const DISCORD_ENDPOINT = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=identify`;
     
     const loginButton = document.getElementById('login-button');
