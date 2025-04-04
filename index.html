@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Sign In</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login-section">
+            <div class="logo">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.3.0/discord.svg" alt="Discord Logo">
+                <h1>Sign in with Discord</h1>
+            </div>
+            <button id="login-button" class="discord-button">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.3.0/discord.svg" alt="Discord Icon">
+                Sign in with Discord
+            </button>
+            <p class="disclaimer">Connect your Discord account to continue</p>
+        </div>
+
+        <div id="profile-section" class="hidden">
+            <div class="profile-header">
+                <h2>Welcome back!</h2>
+                <button id="logout-button">Sign Out</button>
+            </div>
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img id="user-avatar" src="" alt="User Avatar">
+                </div>
+                <div class="profile-info">
+                    <h2 id="display-name"></h2>
+                    <p id="user-id"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
